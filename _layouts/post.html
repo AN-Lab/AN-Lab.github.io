@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if page.title %}
+        <title>{{ page.title }}</title>
+    {% else %}
+        <title>{{ site.name }}</title>
+    {% endif %}
+
+    <meta name="description" content="{{ site.description }}">
+
+</head>
+
+<body>
+    <div class=header>
+    </div>
+
+    <div class="contnet wrapper" style="width: 100%">
+        {{ content | replace_first:'id="markdown-toc"','class="post-toc" style="margin: 0px;"'}}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<div>
+<!-- 添加分类的名称
+  {% for category in site.categories %}
+    <p>{{ category | first }}</p>
+  {% endfor %}
+-->
+  <ul>
+    {% for category in site.categories %}
+    <li>{{ category | first }}
+      <ul>
+        {% for post in category.last %}
+        <li>
+            <a href="{{ site.BaseURL }}{{ post.url }}">
+              {{ post.title }}
+            </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

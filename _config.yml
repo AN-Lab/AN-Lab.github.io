@@ -1,0 +1,24 @@
+title: 软件定义网络（SDN）实验室
+subtitle:
+description:
+author: sdnlab
+language: zh-CN
+TimeZone: Asia/Shanghai
+Encoding: utf-8
+
+BaseURL: https://sdn-lab.github.io
+permalink: /:year/:month/:day/:title
+
+lsi: true
+
+enable_coderay: true
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  use_coderay: false
