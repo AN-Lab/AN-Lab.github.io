@@ -6,7 +6,7 @@ layout: default
     {% for cat in site.data.categories %}
     <li>{{ cat }}
       <ul>
-        {% for post in cat.last %}
+        {% for post in posts[cat] %}
         <li>
             <a href="{{ site.BaseURL }}{{ post.url }}">
               {{ post.title }}
