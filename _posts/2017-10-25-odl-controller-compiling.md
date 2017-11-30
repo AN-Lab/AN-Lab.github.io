@@ -2,7 +2,8 @@
 layout: post
 title: opendaylight控制器源码编译
 date: 2017-10-25
-categories: [SDN, OpenDaylight, controller]
+category: ODL
+tag: [SDN, ODL, controller]
 ---
 # {{ page.title }}
 
