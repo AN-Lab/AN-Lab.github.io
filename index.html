@@ -22,9 +22,9 @@ layout: default
     </li>
     {% endfor %}
   </ul>
-  <div>
+  <div> 分类：
     {% for cat in site.data.categories %}
-    {{ cat }}
+    {{ cat | first }}
     {% endfor %}
   </div>
 </div>
