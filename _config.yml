@@ -13,6 +13,7 @@ lsi: true
 
 enable_coderay: true
 
+markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM

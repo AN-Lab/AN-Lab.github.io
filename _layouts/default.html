@@ -36,6 +36,9 @@
           {% for category in site.data.categories %}
           <li class="menuitem">
             <a href="{{ site.BaseURL }}/{{ category.term | downcase }}/index.html">{{ category.cName }}</a>
+          {% if category.term == "Switchs" %}
+          dddddddddddd
+          {% endif %}
           </li>
           {% endfor %}
         </ul>
