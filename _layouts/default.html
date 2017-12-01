@@ -35,7 +35,7 @@
           <li class="menuitem"><a href="{{ site.BaseURL }}">首页</a></li>
           {% for category in site.data.categories %}
           <li class="menuitem">
-            <a href="{{ site.BaseURL }}/{{ category | downcase }}/index.html">{{ category }}</a>
+            <a href="{{ site.BaseURL }}/{{ category.term | downcase }}/index.html">{{ category }}</a>
           </li>
           {% endfor %}
         </ul>

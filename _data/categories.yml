@@ -1,5 +1,23 @@
-- SDN
-- NFV
-- ODL
-- FloodLight
-- OVS
+- term: SDN
+  eName: "Software-Defined Networking"
+  cName: 软件定义网络
+- term: NFV
+  eName: "Network Function Virtualization"
+  cName: 网络功能虚拟化
+- term: Controller
+  eName: Controller
+  cName: 控制器
+  Controllers:
+    - OpenDayLight(ODL)
+    - FloodLight
+- term: Switchs
+  eName: Switchs
+  cName: SDN交换机
+  Switchs:
+    - name: open vSwitch
+- term: Sminulators
+  eName: Sminulators
+  cName: 仿真器
+  Sminulators:
+    - MiniNet
+    - NS3 
