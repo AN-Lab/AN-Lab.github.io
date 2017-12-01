@@ -7,17 +7,22 @@
 - term: Controller
   eName: Controller
   cName: 控制器
-  Controllers:
-    - OpenDayLight(ODL)
-    - FloodLight
+  Categories:
+    - name: ODL
+      fullname: OpenDayLight
+    - name: FloodLight
+      fullname: FloodLight
 - term: Switchs
   eName: Switchs
   cName: SDN交换机
-  Switchs:
-    - name: open vSwitch
+  Categories:
+    - name: ovs
+      fullname: "Open vSwitch"
 - term: Sminulators
   eName: Sminulators
   cName: 仿真器
-  Sminulators:
-    - MiniNet
-    - NS3 
+  Categories:
+    - name: MiniNet
+      fullname: MiniNet
+    - name: NS3
+      fullname: NS3

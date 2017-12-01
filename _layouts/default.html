@@ -36,9 +36,12 @@
           {% for category in site.data.categories %}
           <li class="menuitem">
             <a href="{{ site.BaseURL }}/{{ category.term | downcase }}/index.html">{{ category.cName }}</a>
-          {% if category.term == "Switchs" %}
-          dddddddddddd
-          {% endif %}
+            {% if category.Categories %}
+            <ul>
+              {% for subcat in category.Categories %}
+              <li class="menuitem"><a herf="{{ site.BaseURL }}/{{ category.term | downcase }}/{{ subcat.name }}/index.html">{{ subcat.fullname }}</a></li>
+            <ul>
+            {% endif %}
           </li>
           {% endfor %}
         </ul>
