@@ -40,15 +40,17 @@ tag: [SDN, ODL, controller]
 >对netconf（/pathto/controller/opendaylight/netconf/pom.xml），删除或注释(\<!-- 原有标记行   -->)掉features和karaf模块。
 
 ### 2.3. 修改ODL控制器的包管理文件pom.xml
-1. 添加模块
+1. 添加模块    
 &emsp;&emsp;在文件/path/controller/pom.xml的moudles节中，逐个添加模块。
+
 ```
 <module>opendaylight/FeatureName</module>    
  ......
 ```
 
-2. 添加features
+2. 添加features    
 &emsp;&emsp;在/path/controller/features/pom.xm的moudles节中，逐个添加模块。
+
 ```
 <module>FeatureName</module>    
 ......
@@ -59,7 +61,8 @@ tag: [SDN, ODL, controller]
 ### 2.4. 修改ODL控制器Karaf的包管理文件pom.xml
 &emsp;&emsp;修改文件/pathto/controller/karaf/opendaylight-karaf/pom.xml，在其依赖集“dependencies”节中添加features。通常，在文件/path/controller/features/FeatureName/features-FeatureName/pom.xml中，会有添加feature所需要的信息，包括groupId、artifactId和version等。
 
-&emsp;&emsp;例如，添加netconf的features的代码如下：    
+&emsp;&emsp;例如，添加netconf的features的代码如下：
+
 ```
 <dependency>
 	<groupId>org.opendaylight.netconf</groupId>
@@ -70,14 +73,17 @@ tag: [SDN, ODL, controller]
 	<scope>runtime</scope>
 </dependency>
 ```
+
 其中的classifier、type和scope基本上都是固定的，主要是修改groupId、artifactId和version这三个标记。
 
 ## 3. 源码编译
 &emsp;&emsp;&nbsp;整体编译控制器，打开命令窗口，使用mvn编译即可。
+
 ```
 cd /pathto/controller
 mvn clane install
 ```
+
 &emsp;&emsp;编译时可用的命令行参数：
 
 参数  |  说明
@@ -89,13 +95,18 @@ mvn clane install
 
 ## 4. 运行
 &emsp;&emsp;在命令终端中，运行karaf，即可启动控制器容器，但并没有全部安装需要的features。
+
 1. 启动karaf
+
 ```
 cd /pathto/controller/karaf/opendaylight-karaf/target/assembly/bin
 ./karaf
 ```
+
 启动容器后，可以使用feature:list[ | grep xxx]查看所有的features或能与给定字符串匹配的features。
+
 2. 加载features
+
 ```
 feature:install odl-restconf
 feature:install odl-l2switch-switch
