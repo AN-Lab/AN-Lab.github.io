@@ -39,9 +39,13 @@
             {% if category.Categories %}
             <ul>
               {% for subcat in category.Categories %}
-              <li class="menuitem"><a herf="{{ site.BaseURL }}/{{ category.term | downcase }}/{{ subcat.name }}/index.html">{{ subcat.fullname }}</a></li>
+              <li class="menuitem">
+                <a herf="{{ site.BaseURL }}/{{ category.term | downcase }}/{{ subcat.name | downcase }}/index.html">
+                  {{ subcat.fullname }}
+                </a>
+              </li>
               {% endfor %}
-            <ul>
+            </ul>
             {% endif %}
           </li>
           {% endfor %}
