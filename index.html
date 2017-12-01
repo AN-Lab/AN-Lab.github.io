@@ -4,7 +4,7 @@ layout: default
 <div>
   <ul>
     {% for cat in site.data.categories %}
-    <li>{{ cat }}
+    <li>{{ cat.term }}
       <ul>
         {% for post in site.categories[cat.term] %}
         <li>
