@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /odl/title.html
 title: opendaylight控制器源码编译
 date: 2017-10-25
 category: ODL
