@@ -45,14 +45,14 @@ tag: [SDN, ODL, controller]
 ```
 <module>opendaylight/FeatureName</module>    
  ......
- ```
+```
 
 2. 添加features
 &emsp;&emsp;在/path/controller/features/pom.xm的moudles节中，逐个添加模块。
 ```
 <module>FeatureName</module>    
 ......
- ```
+```
 
 &emsp;&emsp;__注意：__ 两个文件中的模块添加方式不一样，前者需要加上“opendaylight/FeatureName”，后者则直接使用FeatureName。
 
