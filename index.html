@@ -1,17 +1,31 @@
 ---
 layout: default
 ---
-<div class="Panel">
+<div class="Panel" style="width=30%">
 {% for cat in site.data.categories %}
   <div class="Caption">{{ cat.term }}</div>
   <div>
-    {% for post in site.categories[cat.term] %}
-    <li>
-      <a href="{{ site.BaseURL }}{{ post.url }}">
-      {{ post.title }}
-      </a>
-    </li>
-    {% endfor %}
+    {% if cat.Categories %}
+      {% for subcat in cat.Categories %}
+        <ul>{{ subcat }}
+          {% for post in site.categories[subcat.name] %}
+            <li>
+              <a href="{{ site.BaseURL }}{{ cat }}{{ subcat }}{{ post.url }}">
+                {{ post.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    {% else %}
+      {% for post in site.categories[cat.term] %}
+        <li>
+          <a href="{{ site.BaseURL }}{{ cat }}{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </li>
+      {% endfor %}
+    {% endif %}
   </div>
 {% endfor %}
 </div>
