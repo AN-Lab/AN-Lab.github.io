@@ -31,11 +31,16 @@ layout: default
 </div>
 
 
-<div>
-{{ site.collections }}
-
+<ul>
   {% for col in site.collections %}
-   ddddd:
-    {{ col.cTitle }}
+    <li>{{ col.cTitle }}
+      {% if col.collections %}
+        <ul>
+          {% for subcol in col.collections %}
+            <li>{{ subcol.cTitle }}</li>
+          {% endfor %}
+        <ul>
+      {% endif %}
+    <li>
   {% endfor %}
-</div>
+</ul>
