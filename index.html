@@ -10,7 +10,7 @@ layout: default
         <ul>{{ subcat.fullname }}
           {% for post in site.categories[subcat.name] %}
             <li>
-              <a href="{{ site.BaseURL }}{{ cat.term }}{{ subcat.name }}{{ post.url }}">
+              <a href="{{ site.BaseURL }}{{ post.url }}">
                 {{ post.title }}
               </a>
             </li>
