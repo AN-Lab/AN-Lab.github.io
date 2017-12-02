@@ -30,18 +30,16 @@ layout: default
 {% endfor %}
 </div>
 
+<p> collections </p>
+
 <div>
-<ul>
   {% for col in site.collections %}
-    <li>{{ col.cTitle }}
+    <ul>{{ col.cTitle }}
       {% if col.collections %}
-        <ul>
           {% for subcol in col.collections %}
             <li>{{ subcol.cTitle }}</li>
           {% endfor %}
-        </ul>
       {% endif %}
-    </li>
+    </ul>
   {% endfor %}
-</ul>
 </div>
