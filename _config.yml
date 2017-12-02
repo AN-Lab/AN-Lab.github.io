@@ -46,7 +46,7 @@ collections:
       FloodLight:
         output: true
         title: FloodLight
-        ctitle: FloodLight
+        cTitle: FloodLight
   Switchs:
     title: Switchs
     cTitle: OF交换机
@@ -54,7 +54,7 @@ collections:
       ovs:
         output: true
         title: "Open vSwitch"
-        ctitle: "Open vSwitch"
+        cTitle: "Open vSwitch"
   Sminulators:
     title: Sminulators
     cTitle: 仿真器
@@ -62,8 +62,8 @@ collections:
       MiniNet:
         output: true
         title: "Mininet"
-        ctitle: "Mininet"
+        cTitle: "Mininet"
       NS3:
         output: true
         title: "NS3"
-        ctitle: "NS3"
+        cTitle: "NS3"

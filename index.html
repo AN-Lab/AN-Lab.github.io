@@ -30,7 +30,7 @@ layout: default
 {% endfor %}
 </div>
 
-
+<div>
 <ul>
   {% for col in site.collections %}
     <li>{{ col.cTitle }}
@@ -39,8 +39,9 @@ layout: default
           {% for subcol in col.collections %}
             <li>{{ subcol.cTitle }}</li>
           {% endfor %}
-        <ul>
+        </ul>
       {% endif %}
-    <li>
+    </li>
   {% endfor %}
 </ul>
+</div>
