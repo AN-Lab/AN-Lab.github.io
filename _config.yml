@@ -24,3 +24,39 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   use_coderay: false
+
+collections:
+  SDN:
+    output: true
+    permalink: /:collection/:path/
+    title: "Software-Defined Networking"
+    cTitle: 软件定义网络
+  OFV:
+    output: true
+    title: "Network Function Virtualization"
+    cTitle: 网络功能虚拟化
+  Controller:
+    title: Controller
+    cTitle: 控制器
+    ODL:
+      output: true
+      title: OpenDayLight
+      cTitle: 控制器
+    FloodLight:
+      output: true
+      title: FloodLight
+  Switchs:
+    title: Switchs
+    cTitle: OF交换机
+    ovs:
+      output: true
+      title: "Open vSwitch"
+  Sminulators:
+    title: Sminulators
+    cTitle: 仿真器
+    MiniNet:
+      output: true
+      title: "Mininet"
+    NS3:
+      output: true
+      title: "NS3"
