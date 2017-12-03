@@ -34,21 +34,25 @@ collections:
     permalink: /:collection/:name/
   opendaylight:
     output: true
-    relative_directory: _controllers/opendaylight/
+    directory: /controllers/:collection/
     permalink: /controllers/:collection/:path/
   floodlight:
     output: true
-    relative_directory: _controllers/floodlight/
+    directory: /controllers/:collection/
     permalink: /controllers/:collection/:path/
-  ovs:
+  open-vswitch:
     output: true
-    relative_directory: _switchs/open-vswitch/
+    directory: /switchs/:collection/
     permalink: /switchs/:collection/:path/
   mininet:
     output: true
-    relative_directory: _simulators/:collection/
+    directory: /simulators/:collection/
+    permalink: /simulators/:collection/:path/
+  ns3:
+    output: true
+    directory: /simulators/:collection/
     permalink: /simulators/:collection/:path/
   tools:
     output: true
-    relative_directory: _network/:collection/
+    directory: /network/:collection/
     permalink: /network/:collection/:name/
