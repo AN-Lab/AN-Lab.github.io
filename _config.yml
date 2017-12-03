@@ -28,10 +28,10 @@ kramdown:
 collections:
   sdn:
     output: true
-    permalink: /:collection/:name
+    permalink: /:collection/:name/
   nfv:
     output: true
-    permalink: /:collection/:name
+    permalink: /:collection/:name/
   controllers:
     output: true
     permalink: /:collection/:path/
@@ -43,4 +43,4 @@ collections:
     permalink: /:collection/:path/
   tools:
     output: true
-    permalink: /:collection/:name      
+    permalink: /:collection/:name/     
