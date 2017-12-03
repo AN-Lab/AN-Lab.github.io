@@ -2,44 +2,9 @@
 layout: default
 ---
 <div class="Panel" style="width=30%">
-{% for cat in site.data.categories %}
-  <div class="Caption">{{ cat.cName }}</div>
-  <div>
-    {% if cat.Categories %}
-      {% for subcat in cat.Categories %}
-        <ul>{{ subcat.fullname }}
-          {% for post in site.categories[subcat.name] %}
-            <li>
-              <a href="{{ site.BaseURL }}{{ post.url }}">
-                {{ post.title }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endfor %}
-    {% else %}
-      {% for post in site.categories[cat.term] %}
-        <li>
-          <a href="{{ site.BaseURL }}{{ cat }}{{ post.url }}">
-            {{ post.title }}
-          </a>
-        </li>
-      {% endfor %}
-    {% endif %}
-  </div>
-{% endfor %}
-</div>
-
-<p> collections </p>
-
-<div>
-  {% for col in site.collections %}
-    <ul>{{ col.cTitle }}
-      {% if col.collections %}
-          {% for subcol in col.collections %}
-            <li>{{ subcol.cTitle }}</li>
-          {% endfor %}
-      {% endif %}
-    </ul>
+  {% for post in site.collections limit:10 %}
+   <h2>{{ post[1].title }}</h2>
+   <p>{{ post[1].description }}</p>
+   <p><a href="{{ post[1].url }}">{{ post[1].title }}</a></p>
   {% endfor %}
 </div>
