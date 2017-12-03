@@ -4,7 +4,9 @@ layout: default
 title: 控制器
 ---
 
-{% for item in site.controllers %}
- <h2>{{ item }}</h2>
- <p><a href="{{ item.url }}">{{ item.title }}</a></p>
+<p>控制器</p>
+<ul>
+{% for item in site.controllers limit:16 %}
+ <li><a href="{{ item.url }}">{{ item.title }}</a></li>
 {% endfor %}
+</ul>
