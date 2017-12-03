@@ -4,7 +4,8 @@ layout: default
 ---
 <h2>控制器/OpenDayLight</h2>
 <ul>
-{% for item in site.controllers[opendaylight] offset:16 limit:16 %}
+{% for item in site.controllers offset:16 limit:16 %}
+ {{ item }}
  {% if item.title != "Readme" %}
  <li><a href="{{ item.url | downcase}}">
  <p>{{ item.title }}</p>
