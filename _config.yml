@@ -33,8 +33,16 @@ collections:
     output: true
     permalink: /:collection/:name/
   controllers:
-    output: true
+    output: false
     permalink: /:collection/:path/
+  opendaylight:
+    output: true
+    relative_directory: _controllers/opendaylight/
+    permalink: /controllers/:collection/:path/
+  floodlight:
+    output: true
+    relative_directory: _controllers/floodlight/
+    permalink: /controllers/:collection/:path/
   switchs:
     output: true
     permalink: /:collection/:path/
