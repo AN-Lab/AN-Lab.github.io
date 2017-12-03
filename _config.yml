@@ -33,7 +33,7 @@ collections:
     output: true
     permalink: /:collection/:name/
   controllers:
-    output: false
+    output: true
     permalink: /:collection/:path/
   opendaylight:
     output: true
