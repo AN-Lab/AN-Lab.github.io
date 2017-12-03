@@ -4,9 +4,13 @@ layout: default
 title: 控制器
 ---
 
-<p>控制器</p>
 <ul>
 {% for item in site.controllers limit:16 %}
- <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+ {% if item.title != "Readme","控制器" %}
+ <li><a href="{{ item.url | downcase}}">
+ <p>{{ item.title }}</p>
+ <p>{{ item.description }}</p>
+ </a></li>
+ {% endif %}
 {% endfor %}
 </ul>

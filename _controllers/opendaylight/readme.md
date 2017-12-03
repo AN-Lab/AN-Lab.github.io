@@ -2,12 +2,12 @@
 permalink: /controllers/opendaylight/index.html
 layout: default
 ---
-<p>控制器/OpenDayLight</p>
+<h2>控制器/OpenDayLight</h2>
 <ul>
-{% for item in site.controllers limit:1 %}
+{% for item in site.controllers.opendaylight limit:16 %}
  {% if item.title != "Readme" %}
  <li><a href="{{ item.url | downcase}}">
- <h2>{{ item.title }}</h2>
+ <p>{{ item.title }}</p>
  <p>{{ item.description }}</p>
  </a></li>
  {% endif %}
