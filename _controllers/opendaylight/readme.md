@@ -3,7 +3,7 @@ permalink: /controllers/opendaylight/index.html
 layout: default
 title: 控制器-OpenDayLight
 ---
-<h2>控制器/OpenDayLight</h2>
+<h2>控制器:OpenDayLight</h2>
 <ul>
 {% for item in site.controllers limit:16 %}
  {% if item.title != "Readme" %}
