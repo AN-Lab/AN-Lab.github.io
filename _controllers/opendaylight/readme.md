@@ -1,7 +1,7 @@
 ---
 permalink: /controllers/opendaylight/index.html
 layout: default
-title: 控制器/OpenDayLight
+title: 控制器-OpenDayLight
 ---
 <h2>控制器/OpenDayLight</h2>
 <ul>
