@@ -4,8 +4,8 @@
 - collection: NFV
   en: "Network Function Virtualization"
   cn: 网络功能虚拟化
-- collection: Controller
-  en: Controller
+- collection: Controllers
+  en: Controllers
   cn: 控制器
   dirs:
     - OpenDayLight
