@@ -4,7 +4,7 @@ layout: default
 title: 控制器
 ---
 
-<h2>控制器/OpenDayLight</h2>
+<h2>控制器</h2>
 
 <ul>
 {% for item in site.controllers limit:16 %}
