@@ -32,9 +32,6 @@ collections:
   nfv:
     output: true
     permalink: /:collection/:name/
-  controllers:
-    output: true
-    permalink: /:collection/:path/
   opendaylight:
     output: true
     relative_directory: _controllers/opendaylight/
@@ -43,12 +40,15 @@ collections:
     output: true
     relative_directory: _controllers/floodlight/
     permalink: /controllers/:collection/:path/
-  switchs:
+  ovs:
     output: true
-    permalink: /:collection/:path/
-  sminulators:
+    relative_directory: _switchs/open-vswitch/
+    permalink: /switchs/:collection/:path/
+  mininet:
     output: true
-    permalink: /:collection/:path/
+    relative_directory: _simulators/:collection/
+    permalink: /simulators/:collection/:path/
   tools:
     output: true
-    permalink: /:collection/:name/
+    relative_directory: _network/:collection/
+    permalink: /network/:collection/:name/
