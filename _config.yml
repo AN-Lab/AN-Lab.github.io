@@ -28,19 +28,19 @@ kramdown:
 collections:
   sdn:
     output: true
-#    permalink: /:collection/:name/
+    permalink: /:collection/:name/
   nfv:
     output: true
-#    permalink: /:collection/:name/
+    permalink: /:collection/:name/
   controllers:
     output: true
-#    permalink: /:collection/:path/
+    permalink: /:collection/:path/
   switchs:
     output: true
-#    permalink: /:collection/:path/
+    permalink: /:collection/:path/
   sminulators:
     output: true
-#    permalink: /:collection/:path/
+    permalink: /:collection/:path/
   tools:
     output: true
-#    permalink: /:collection/:name/
+    permalink: /:collection/:name/
