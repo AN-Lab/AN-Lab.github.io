@@ -33,15 +33,15 @@
       <div class="mainmenu">
         <ul>
           <li class="menuitem"><a href="{{ site.BaseURL }}">首页</a></li>
-          {% for category in site.data.categories %}
+          {% for item in site.data.nav %}
           <li class="menuitem">
-            <a href="{{ site.BaseURL }}/{{ category.term | downcase }}/index.html">{{ category.cName }}</a>
-            {% if category.Categories %}
+            <a href="{{ site.BaseURL }}/{{ item.collection | downcase }}">{{ item.cn }}</a>
+            {% if item.dirs %}
             <ul>
-              {% for subcat in category.Categories %}
+              {% for dir in item.dirs %}
               <li class="menuitem">
-                <a href="{{ site.BaseURL }}/{{ category.term | downcase }}/{{ subcat.name | downcase }}/index.html">
-                  {{ subcat.fullname }}
+                <a href="{{ site.BaseURL }}/{{ item.collection | downcase }}/{{ dir | downcase }}">
+                  {{ dir }}
                 </a>
               </li>
               {% endfor %}

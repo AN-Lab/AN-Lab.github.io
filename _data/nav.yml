@@ -1,0 +1,26 @@
+- collection: SDN
+  en: "Software-Defined Networking"
+  cn: 软件定义网络
+- collection: NFV
+  en: "Network Function Virtualization"
+  cn: 网络功能虚拟化
+- collection: Controller
+  en: Controller
+  cn: 控制器
+  dirs:
+    - OpenDayLight
+    - FloodLight
+- collection: Switchs
+  en: Switchs
+  cn: 交换机(OpenFlow)
+  dirs:
+    - Open-vSwitch
+- collection: Sminulators
+  en: Sminulators
+  cn: 仿真器
+  dirs:
+    - MiniNet
+    - NS3
+- collection: tools
+  en: "Network Tools"
+  cn: 网络软件和工具

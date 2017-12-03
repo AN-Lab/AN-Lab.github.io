@@ -1,10 +1,9 @@
 ---
 layout: post
-permalink: /:categories/:title
 title: opendaylight控制器源码编译
 date: 2017-10-25
 category: ODL
-tag: [SDN, ODL, controller]
+tag: [SDN, controller, ODL]
 ---
 # {{ page.title }}
 
