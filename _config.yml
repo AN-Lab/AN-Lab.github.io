@@ -1,12 +1,12 @@
-title: 软件定义网络（SDN）实验室
+title: 高级计算机网络（ANL）实验室
 subtitle:
 description:
-author: sdnlab
+author: AN-Lab
 language: zh-CN
 TimeZone: Asia/Shanghai
 Encoding: utf-8
 
-BaseURL: https://sdn-lab.github.io
+BaseURL: https://an-lab.github.io
 permalink: /:year/:month/:day/:title
 
 lsi: true
