@@ -1,14 +1,14 @@
 <div id="header">
 	<div id="logo">
-		<p>Laboratory</p>
+		<p>{{ site.title }}</p>
 	</div>
 	<div id="navbar">
-		<div class="a-box" onclick="javascript:window.location.href='https://ericmcr.github.io'"><p>主页</p></div>
+		<div class="a-box" onclick="javascript:window.location.href='{{ site.BaseURL }}'"><p>主页</p></div>
 		<div class="a-box" onclick="javascript:window.location.href=''"><p>新闻</p></div>
 		<div class="a-box" onclick="javascript:window.location.href='https://ericmcr.github.io/knowledge-base/'"><p>知识库</p></div>
 	</div>
 	<div id="login">
-		<img src="/assets/images/login.png">
+		<img src="/assets/img/login.png">
 		<div onclick="openLoginBox()">Log in</div>
 	</div>
 	<div id="login_status">
