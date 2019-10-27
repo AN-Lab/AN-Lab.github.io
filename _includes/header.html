@@ -1,0 +1,52 @@
+<div id="header">
+	<div id="logo">
+		<p>Laboratory</p>
+	</div>
+	<div id="navbar">
+		<div class="a-box" onclick="javascript:window.location.href='https://ericmcr.github.io'"><p>主页</p></div>
+		<div class="a-box" onclick="javascript:window.location.href=''"><p>新闻</p></div>
+		<div class="a-box" onclick="javascript:window.location.href='https://ericmcr.github.io/knowledge-base/'"><p>知识库</p></div>
+	</div>
+	<div id="login">
+		<img src="/assets/images/login.png">
+		<div onclick="openLoginBox()">Log in</div>
+	</div>
+	<div id="login_status">
+		<img src="" id="avatar_small">
+		<span id="status_username"></span>
+		<div id="sign_out" onclick="signOut()"> 注销 </div>
+		<div id="write_post" onclick="javascript:window.location.href='https://ericmcr.github.io/post-editor/'">写文章</div>
+	</div>
+</div>
+<div id="login_box">
+	<div id="close_box" onclick="openLoginBox()">
+		<p><span>x</span></p>
+	</div>
+	<div id="text1" class="text">
+		<p><span>请使用GitHub账号登陆</span></p>
+	</div>
+	<div id="line1">
+		<hr>
+	</div>
+	<div id="input_box">
+		<div id="text2" class="text">
+			<p><span>账号:</span></span></p>
+		</div>
+		<hr>
+		<input type="text" name="" id="input_id" placeholder="请输入GitHub账号">
+		<p id="id_warn" class="warn">账号不能为空！</p>
+		<div id="text2" class="text">
+			<p><span>密码:</span></span></p>
+		</div>
+		<hr>
+		<input type="password" name="" id="input_password" placeholder="请输入密码">
+		<p id="pw_warn" class="warn">密码不能为空！</p>
+		<p id="login_warn" class="warn">用户名或密码错误！</p>
+		<p><input type="checkbox" id="rememberpw"> 记住密码</p>
+	</div>
+	<button id="submit" class="login_button" onclick="checkInput()">登陆</button>
+	<button id="register" class="login_button">注册</button>
+</div>
+<div id="wait_box">
+    <p>登录中<span id="dot"></span></p>
+</div>

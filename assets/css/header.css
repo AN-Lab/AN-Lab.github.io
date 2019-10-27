@@ -1,0 +1,238 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+#header{
+    width: 100%;
+    height: 50px;
+    background: #BDBDBD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+#header #logo{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+    margin-left: 200px;
+}
+#header #navbar{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 23px;
+    margin-left: 300px;
+}
+#header #navbar .a-box{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#header #navbar .a-box:hover{
+    background-color: #A4A4A4;
+}
+#header #login{
+    width: 300px;
+    height: 50px;
+    font-size: 23px;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+}
+#header #login div{
+    cursor: pointer;
+}
+#header #login img{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+#header #login_status{
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+#header #login_status img{
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 100%;
+}
+#header #login_status #sign_out{
+    margin-left: 15px;
+    cursor: pointer;
+    border: 2px solid;
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+#header #login_status #write_post{
+    margin-left: 10px;
+    cursor: pointer;
+    border: 2px solid;
+    border-radius: 10px;
+    width: 80px;
+    text-align: center;
+}
+#header #login_status div:hover{
+    background-color: #A4A4A4;
+}
+#login_box{
+    position: absolute;
+    left: 550px;
+    top: 231px;
+    width: 320px;
+    height: 320px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(121, 121, 121, 1);
+    border-radius: 5px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    display: none;
+    z-index: 1;
+}
+#login_box #close_box{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    cursor: pointer;
+}
+#login_box .text{
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    color: #333333;
+    text-align: center;
+    line-height: normal;
+}
+
+#login_box #text1{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    width: 147px;
+    white-space: nowrap;
+    font-size: 14px;
+    text-align: left;
+}
+
+#login_box #line1{
+    width: 147px;
+    height: 2px;
+    position: absolute;
+    left: 30px;
+    top: 60px;
+}
+
+#login_box #input_box{
+    width: 260px;
+    height: 200px;
+    position: absolute;
+    left: 30px;
+    top: 70px;
+}
+
+#login_box #input_box #text2{
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+#login_box #input_box #input_id{
+    width: 255px;
+    height: 25px;
+    margin-top: 10px;
+}
+
+#login_box #input_box #input_password{
+    width: 255px;
+    height: 25px;
+    margin-top: 10px;
+}
+#login_box .login_button{
+    font-size: 13px;
+    text-decoration: none;
+    width: 70px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#login_box #input_box .warn{
+    font-size: 10px;
+    color: red;
+}
+#login_box #input_box #id_warn{
+    display: none;
+}
+#login_box #input_box #pw_warn{
+    display: none;
+}
+#login_box #input_box #login_warn{
+    display: none;
+    font-size: 13px;
+}
+#login_box #submit{
+    position: absolute;
+    top: 260px;
+    left: -40px;
+}
+#login_box #register{
+    position: absolute;
+    top: 260px;
+    right: -40px;
+}
+#wait_box{
+    width: 250px;
+    height: 40px;
+    font-size: 18px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(121, 121, 121, 1);
+    border-radius: 5px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-align: center;
+    position: absolute;
+    left: 585px;
+    top: 360px;
+    display: none;
+    z-index: 2;
+}
