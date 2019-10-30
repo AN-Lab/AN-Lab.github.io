@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+</head>
+<body>
+	{% include header.html %}
+	<div id="top">
+		<img src="/assets/images/img8.jpg">
+		<div id="menu-bar">
+			<div id="date-box">
+				<p>时间</p>
+				<p>2019</p>
+				<p>09</p>
+				<p>21</p>
+			</div>
+			<div id="search-box">
+				<input type="text" name="search" id="search">
+				<button>搜索</button>
+				<button>我的文章</button>
+			</div>
+		</div>
+	</div>
+	<div id="list">
+		<div id="title">
+			<div id="left" class="title">
+				<p>KNOWLEDGE BASE</p>
+			</div>
+			<div id="right" class="title">
+				<p>全部文章</p>
+			</div>
+		</div>
+		<hr>
+		<div id="posts-box">
+			{% for post in site.knowledge-base.posts %}
+			{% if post.category == page.category or page.category == "All" %}
+			<div class="post" onclick="window.open('{{ post.url }}')">
+				<div class="post-info">
+					<p class="title">标题：{{ post.title }}</p>
+					<p class="excerpt">作者：{{ post.author }}</p>
+				</div>
+				<div class="post-date">
+					<p class="day">{{ post.date | date:"%d"}}</p>
+					<p class="month">{{ post.date | date:"%Y/%m"}}</p>
+				</div>
+			</div>
+			{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</body>
+</html>
