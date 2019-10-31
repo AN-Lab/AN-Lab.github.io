@@ -32,7 +32,7 @@
 		</div>
 		<hr>
 		<div id="posts-box">
-			{% for post in site.knowledge-base.posts %}
+			{% for post in site.knowledge-base %}
 			{% if post.category == page.category or page.category == "All" %}
 			<div class="post" onclick="window.open('{{ post.url }}')">
 				<div class="post-info">
