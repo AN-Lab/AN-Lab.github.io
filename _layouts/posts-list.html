@@ -32,8 +32,7 @@
 		</div>
 		<hr>
 		<div id="posts-box">
-			{% for post in site.posts %}
-			{% if post.category == page.category or page.category == "All" %}
+			{% for post in site.knowledge-base %}
 			<div class="post" onclick="window.open('{{ post.url }}')">
 				<div class="post-info">
 					<p class="title">标题：{{ post.title }}</p>
@@ -44,7 +43,6 @@
 					<p class="month">{{ post.date | date:"%Y/%m"}}</p>
 				</div>
 			</div>
-			{% endif %}
 			{% endfor %}
 		</div>
 	</div>
