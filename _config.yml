@@ -58,4 +58,5 @@ collections:
     permalink: /network/:collection/:name/
   knowledge-base: 
     output: true
-    directory: /knowledge-base/_posts/
+    directory: /knowledge-base/posts/
+    permalink: /:collection/:name/
