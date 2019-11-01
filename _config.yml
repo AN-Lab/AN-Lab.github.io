@@ -56,7 +56,3 @@ collections:
     output: true
     directory: /network/:collection/
     permalink: /network/:collection/:name/
-  knowledge-base: 
-    output: true
-    directory: /posts/
-    permalink: /:collection/:name/
