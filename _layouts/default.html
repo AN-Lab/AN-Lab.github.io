@@ -1,62 +1,45 @@
+---
+styles: [default.css,article.css]
+scripts: [default.js]
+---
 <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% if page.title %}
-        <title>{{ page.title }}</title>
-    {% else %}
-        <title>{{ site.title }}</title>
-    {% endif %}
-
-    <meta name="description" content="{{ site.description }}">
-
-    {% if site.baidu_verification %}
-      <script>
-        var _hmt = _hmt || [];
-        (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-        })();
-      </script>
-    {% endif %}
-
-</head>
-
+<html lang="en">
+{% include head.html %}
 <body>
-    <div class=header>
-      <div class="logo" style="background:#008B8B; color:Yellow"> <img src="/images/SDNLab_logo.png" alt="LOGO" width="64px" height="64px" />高级计算机网络实验室（ANL）</div>
-      <div class="mainmenu">
-        <ul>
-          <li class="menuitem"><a href="{{ site.BaseURL }}">首页</a></li>
-          {% for item in site.data.nav %}
-          <li class="menuitem">
-            <a href="{{ site.BaseURL }}/{{ item.collection | downcase }}">{{ item.cn }}</a>
-            {% if item.dirs %}
-            <ul>
-              {% for dir in item.dirs %}
-              <li class="menuitem">
-                <a href="{{ site.BaseURL }}/{{ item.collection | downcase }}/{{ dir | downcase }}">
-                  {{ dir }}
-                </a>
-              </li>
-              {% endfor %}
-            </ul>
-            {% endif %}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
+	{% include header.html %}
+	<div id="top-img">
+		<img src="/assets/img/top.jpg">
+	</div>
+	<div id="content">
+		<div id="top">
+			<div id="left">
+				<p>备注</p>
+			</div>
+			<div id="right">
+				<p>版块: <span id="category">{{ page.category }}</span></p>
+				<p>作者: <span id="author">{{ page.author }}</span></p>
+				<div onclick="javascript:window.location.href='https://ericmcr.github.io/post-editor/?{{ page.date | date: "%Y-%m-%d" }}-{{ page.title }}-{{ page.author }}'"><p>编辑</p></div>
+			</div>
+		</div>
+		<div id="main">
+			<div id="left">
+				<div id="content">
+					<p>时间: <br>{{ page.date | date:"%Y.%m.%d %H:%M:%S" }} <br>标签: <br>{{ page.tags | join:', ' }}</p>
+				</div>
+			</div>
+			<div id="right">
+				<div id="content">
+					<h1>{{page.title}}</h1>
+					<p class="post-info">{{ page.date | date:"%Y.%m.%d %H:%M:%S" }} 字数 {{ page.content | number_of_words }}</p>
+					<hr>
+					<br>
+					<div class="article">
+						{{ content  }}
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <div class="contnet wrapper">
-        {{ content | replace_first:'id="markdown-toc"','class="post-toc" style="margin: 0px;"'}}
-    </div>
-
+	</div>
 </body>
-
 </html>
