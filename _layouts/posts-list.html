@@ -32,7 +32,7 @@
 		</div>
 		<hr>
 		<div id="posts-box">
-			{% for post in site.knowledge-base %}
+			{% for post in site.knowledge-base.posts %}
 			<div class="post" onclick="window.open('{{ post.url }}')">
 				<div class="post-info">
 					<p class="title">标题：{{ post.title }}</p>
