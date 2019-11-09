@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>文章编辑器</title>
+    <link rel="stylesheet" href="editor.md/css/editormd.min.css" />
+    <link rel="stylesheet" type="text/css" href="mdeditor.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="editor.md/editormd.min.js"></script>
+    <script type="text/javascript" src="mdeditor.js"></script>
+</head>
+<body>
+	<div id="top">
+		<div id="catalog-title-container"><p>我的文章</p></div>
+		<div id="input-container">
+			<input type="text" name="title" id="title" placeholder="请输入文章标题">
+		</div>
+		<div id="button-container">
+			<div id="save-draft"><p>保存草稿</p></div>
+			<div id="submit"><p>发布文章</p></div>
+		</div>
+		<div id="avatar-container">
+			<img>
+		</div>
+	</div>
+	<div id="container">
+		<div id="catalog-container"></div>
+		<div id="editor-container">
+			<div id="editor">
+				<textarea style="display:none;"></textarea>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

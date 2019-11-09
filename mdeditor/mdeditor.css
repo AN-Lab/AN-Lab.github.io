@@ -1,0 +1,92 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    overflow: hidden;
+}
+#top{
+    width: 100%;
+    height: 50px;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#top #catalog-title-container{
+    width: 15%;
+    color: #6E6E6E;
+    font-size: 20px;
+}
+#top #catalog-title-container p{
+    margin-left: 15px;
+}
+#top #input-container{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#top #input-container input{
+    width: 100%;
+    height: 60%;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 4px;
+    outline: none;
+}
+#top #button-container{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#top #button-container div{
+    width: 35%;
+    height: 63%;
+    font-size: 17px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#top #button-container #save-draft{
+    background-color: #FAFAFA;
+    color: #CA0C16;
+    border: 1px solid #CA0C16;
+}
+#top #button-container #save-draft:hover{
+    background-color: #F8E0E6;
+}
+#top #button-container #submit{
+    background-color: #CA0C16;
+    color: #FFF;
+    border: 1px solid #CA0C16;
+}
+#top #button-container #submit:hover{
+    background-color: #B40404;
+}
+#top #avatar-container{
+    width: 5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#top #avatar-container img{
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+}
+#container{
+    display: flex;
+}
+#container #catalog-container{
+    width: 15%;
+    background-color: #EFF8FB;
+}
+#container #editor-container{
+    width: 85%;
+}
