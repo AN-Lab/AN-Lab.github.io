@@ -3,8 +3,6 @@ $(function () {
 
   $("#catalog-container").css("height", height + "px");
 
-  $("#editor").load("help.md");
-
   var editor = editormd("editor", {
     placeholder: '本编辑器支持Markdown编辑，左边编写，右边预览',  //默认显示的文字
     width: "100%",
