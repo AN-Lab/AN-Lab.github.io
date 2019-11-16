@@ -66,7 +66,7 @@ function submit() {
   for (let i = 0; i < tag_box.length; i++) {
     tags += tag_box[i].value + ", ";
   }
-  var category = $("#category-container option:selected");
+  var category = $("#category-container option:selected").val();
   console.log("title:" + title + "\ncontent:" + content + "\ntags:" + tags + "\ncategory:" + category);
 }
 
