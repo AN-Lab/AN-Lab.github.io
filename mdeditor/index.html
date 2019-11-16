@@ -50,7 +50,8 @@
 				<div class="form-content">
 					<label>文章分类：</label>
 					<div class="content-area">
-						<select>
+						<select id="category-container">
+							<option value="(请选择分类)"></option>
 							<option value="类别1">类别1</option>
 							<option value="类别2">类别2</option>
 							<option value="类别3">类别3</option>
@@ -62,7 +63,7 @@
 			</div>
 			<div id="details-button">
 				<div id="save-draft">保存为草稿</div>
-				<div id="submit">发布文章</div>
+				<div id="submit" onclick="submit()">发布文章</div>
 			</div>
 		</div>
 	</div>

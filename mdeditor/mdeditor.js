@@ -55,6 +55,19 @@ function insertText() {
   editor.insertValue("(这是插入的一段文字)");
 }
 
+//发布文章
+function submit(){
+  var title = $("#title").val();
+  var content = editor.getMarkdown();
+  var tag_box = document.getElementsByClassName("tag");
+  var tags = "";
+  for (let i = 0;i<tag_box.length;i++){
+    tags+=tag_box[i].value+", ";
+  }
+  var category = $("#category-container option:selected");
+  console.log("title:"+title+"\ncontent:"+content+"\ntags:"+tags+"\ncategory:"+category);
+}
+
 //获取cookie信息
 function getCookie(cname) {
   var name = cname + "=";
