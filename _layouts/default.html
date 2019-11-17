@@ -3,7 +3,6 @@
 {% include head.html %}
 <link rel="stylesheet" type="text/css" href="/assets/css/default.css">
 <link rel="stylesheet" href="/assets/css/editor.md.preview.css" />
-<link rel="stylesheet" href="/assets/css/article.css" />
 <script src="/assets/editor.md/lib/marked.min.js"></script>
 <script src="/assets/editor.md/lib/prettify.min.js"></script>
 <script src="/assets/editor.md/lib/raphael.min.js"></script>
@@ -46,7 +45,7 @@
 						{{ page.content | number_of_words }}</p>
 					<hr>
 					<br>
-					<div class="article" markdown="0">
+					<div class="editor-preview-container">
 						{{ content }}
 					</div>
 				</div>
