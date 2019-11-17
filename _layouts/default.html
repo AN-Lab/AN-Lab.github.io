@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
-    <link rel="stylesheet" type="text/css" href="/assets/css/default.css">
-	<link rel="stylesheet" href="/assets/css/editormd.preview.css" />
-	<script type="text/javascript" src="/assets/js/default.js"></script>
+<link rel="stylesheet" type="text/css" href="/assets/css/default.css">
+<link rel="stylesheet" href="/assets/css/editormd.preview.css" />
+<script src="/assets/editormd/lib/marked.min.js"></script>
+<script src="/assets/editormd/lib/prettify.min.js"></script>
+<script src="/assets/editormd/lib/raphael.min.js"></script>
+<script src="/assets/editormd/lib/underscore.min.js"></script>
+<script src="/assets/editormd/lib/sequence-diagram.min.js"></script>
+<script src="/assets/editormd/lib/flowchart.min.js"></script>
+<script src="/assets/editormd/lib/jquery.flowchart.min.js"></script>
+<script type="text/javascript" src="/assets/js/default.js"></script>
+
 <body>
 	{% include header.html %}
 	<div id="top-img">
@@ -17,7 +25,10 @@
 			<div id="right">
 				<p>版块: <span id="category">{{ page.category }}</span></p>
 				<p>作者: <span id="author">{{ page.author }}</span></p>
-				<div onclick="javascript:window.location.href='https://ericmcr.github.io/post-editor/?{{ page.date | date: "%Y-%m-%d" }}-{{ page.title }}-{{ page.author }}'"><p>编辑</p></div>
+				<div
+					onclick="javascript:window.location.href='https://ericmcr.github.io/post-editor/?{{ page.date | date: "%Y-%m-%d" }}-{{ page.title }}-{{ page.author }}'">
+					<p>编辑</p>
+				</div>
 			</div>
 		</div>
 		<div id="main">
@@ -29,16 +40,28 @@
 			<div id="right">
 				<div id="content">
 					<h1>{{page.title}}</h1>
-					<p class="post-info">{{ page.date | date:"%Y.%m.%d %H:%M:%S" }} 字数 {{ page.content | number_of_words }}</p>
+					<p class="post-info">{{ page.date | date:"%Y.%m.%d %H:%M:%S" }} 字数
+						{{ page.content | number_of_words }}</p>
 					<hr>
 					<br>
-					<div class="markdown-body editormd-html-preview">
-						{{ content | markdownify  }}
+					<div class="mdeditor-view">
+						{{ content }}
 					</div>
 				</div>
 			</div>
 		</div>
 
 	</div>
+	<script type="text/javascript">
+		testEditormdView2 = editormd.markdownToHTML("mdeditor-view", {
+			htmlDecode      : "style,script,iframe",  // you can filter tags decode
+			emoji           : true,
+			taskList        : true,
+			tex             : true,  // 默认不解析
+			flowChart       : true,  // 默认不解析
+			sequenceDiagram : true,  // 默认不解析
+		});
+	</script>
 </body>
+
 </html>
