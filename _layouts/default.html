@@ -3,6 +3,7 @@
 {% include head.html %}
 <link rel="stylesheet" type="text/css" href="/assets/css/default.css">
 <link rel="stylesheet" href="/assets/css/editor.md.preview.css" />
+<link rel="stylesheet" href="/assets/css/article.css" />
 <script src="/assets/editor.md/lib/marked.min.js"></script>
 <script src="/assets/editor.md/lib/prettify.min.js"></script>
 <script src="/assets/editor.md/lib/raphael.min.js"></script>
@@ -45,24 +46,14 @@
 						{{ page.content | number_of_words }}</p>
 					<hr>
 					<br>
-					<div class="mdeditor-view">
-						<textarea style="display:none;" name="test-editormd-markdown-doc">{{content}}</textarea>
+					<div class="article">
+						{{ content }}
 					</div>
 				</div>
 			</div>
 		</div>
 
 	</div>
-	<script type="text/javascript">
-		var testEditormdView2 = editormd.markdownToHTML("mdeditor-view", {
-			htmlDecode      : "style,script,iframe",  // you can filter tags decode
-			emoji           : true,
-			taskList        : true,
-			tex             : true,  // 默认不解析
-			flowChart       : true,  // 默认不解析
-			sequenceDiagram : true,  // 默认不解析
-		});
-	</script>
 </body>
 
 </html>
