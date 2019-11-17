@@ -2,14 +2,14 @@
 <html lang="en">
 {% include head.html %}
 <link rel="stylesheet" type="text/css" href="/assets/css/default.css">
-<link rel="stylesheet" href="/assets/css/editormd.preview.css" />
-<script src="/assets/editormd/lib/marked.min.js"></script>
-<script src="/assets/editormd/lib/prettify.min.js"></script>
-<script src="/assets/editormd/lib/raphael.min.js"></script>
-<script src="/assets/editormd/lib/underscore.min.js"></script>
-<script src="/assets/editormd/lib/sequence-diagram.min.js"></script>
-<script src="/assets/editormd/lib/flowchart.min.js"></script>
-<script src="/assets/editormd/lib/jquery.flowchart.min.js"></script>
+<link rel="stylesheet" href="/assets/css/editor.md.preview.css" />
+<script src="/assets/editor.md/lib/marked.min.js"></script>
+<script src="/assets/editor.md/lib/prettify.min.js"></script>
+<script src="/assets/editor.md/lib/raphael.min.js"></script>
+<script src="/assets/editor.md/lib/underscore.min.js"></script>
+<script src="/assets/editor.md/lib/sequence-diagram.min.js"></script>
+<script src="/assets/editor.md/lib/flowchart.min.js"></script>
+<script src="/assets/editor.md/lib/jquery.flowchart.min.js"></script>
 <script type="text/javascript" src="/assets/js/default.js"></script>
 
 <body>
@@ -26,7 +26,7 @@
 				<p>版块: <span id="category">{{ page.category }}</span></p>
 				<p>作者: <span id="author">{{ page.author }}</span></p>
 				<div
-					onclick="javascript:window.location.href='https://ericmcr.github.io/post-editor/?{{ page.date | date: "%Y-%m-%d" }}-{{ page.title }}-{{ page.author }}'">
+					onclick="javascript:window.location.href='https://an-lab.github.io/mdeditor/?{{ page.date | date: "%Y-%m-%d" }}-{{ page.title }}-{{ page.author }}'">
 					<p>编辑</p>
 				</div>
 			</div>
@@ -53,7 +53,7 @@
 
 	</div>
 	<script type="text/javascript">
-		testEditormdView2 = editormd.markdownToHTML("mdeditor-view", {
+		testEditor.mdView2 = editor.md.markdownToHTML("mdeditor-view", {
 			htmlDecode      : "style,script,iframe",  // you can filter tags decode
 			emoji           : true,
 			taskList        : true,
