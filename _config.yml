@@ -14,7 +14,7 @@ lsi: true
 #enable_coderay: true
 
 #markdown: redcarpet
-markdown: kramdown
+markdown: rdiscount
 highlighter: rouge
 kramdown:
   input: GFM
