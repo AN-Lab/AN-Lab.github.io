@@ -45,8 +45,8 @@
 						{{ page.content | number_of_words }}</p>
 					<hr>
 					<br>
-					<div class="markdown-body editormd-preview-container" previewcontainer="true">
-						{{ content }}
+					<div class="markdown-body editormd-preview-container">
+						{{ content | markdownify}}
 					</div>
 				</div>
 			</div>
