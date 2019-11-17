@@ -1,4 +1,5 @@
 var editor;
+var username = getCookie("username");
 
 $(function () {
   var height = document.documentElement.clientHeight - 50; //编辑器和左侧目录的高度
@@ -63,12 +64,13 @@ function submit() {
   var title = $("#title").val();
   var content = editor.getMarkdown();
   var tag_box = document.getElementsByClassName("tag");
-  var tags = "";
+  var tags = new Array(tag_box.length);
   for (let i = 0; i < tag_box.length; i++) {
-    tags += tag_box[i].value + ", ";
+    tags[i] = tag_box[i].value;
   }
   var category = $("#category-container option:selected").val();
-  console.log("title:" + title + "\ncontent:" + content + "\ntags:" + tags + "\ncategory:" + category);
+  console.log("title:" + title + "\ncontent:\n" + content + "\ntags:" + tags + "\ncategory:" + category);
+  creatFile(title,category,content,username,tags);
 }
 
 //获取cookie信息
@@ -100,15 +102,15 @@ function getTagWidth(text) {
 //在location元素前方添加标签,并绑定事件
 function addTag(location) {
   var tagBox = $("input.tag");
-  console.log(tagBox.length + "----" + $("input.tag").eq(tagBox.length - 1).val());
   if (tagBox.length != 0 && $("input.tag").eq(tagBox.length - 1).val() == "") return;
   if (tagBox.length >= 5) {
     alert("当前标签数量已达上限！");
     return;
   }
-  $(location).before("<div class='tag-box'><input type='text' class='tag' onblur='checkTagRepe()'><div class='delete-button'>&times</div></div>");
+  $(location).before("<div class='tag-box'><input type='text' class='tag' onblur='checkTag()'><div class='delete-button'>&times</div></div>");
+  $("input.tag:last").focus();
   $("input.tag").bind('input propertychange', function () {
-    $(this).width(getTagWidth($(this).val() + 3));
+    $(this).width(getTagWidth($(this).val())+3);
   });
   $(".tag-box .delete-button").click(function () {
     $(this).parent().remove();
@@ -120,9 +122,15 @@ function deleteTag(thisTag) {
   thisTag.remove;
 }
 
-//检查当前标签是否存在重复，若存在则删除其中靠后的一个标签
-function checkTagRepe() {
+//检查当前标签是否存在重复或空标签，若存在则删除其中靠后的一个标签
+function checkTag() {
   var tags = document.getElementsByClassName("tag");
+  for (let i = 0; i < tags.length; i++){
+    if (tags[i].value == ""){
+      tags[i].parentNode.remove();
+      return;
+    }
+  }
   for (let i = 0; i < tags.length - 1; i++) {
     for (let j = i + 1; j < tags.length; j++) {
       if (tags[i].value == tags[j].value) {
