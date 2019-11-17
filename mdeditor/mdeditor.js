@@ -61,6 +61,7 @@ function insertText() {
 
 //发布文章
 function submit() {
+  $("#wait_box1").css("display","block");
   var title = $("#title").val();
   var content = editor.getMarkdown();
   var tag_box = document.getElementsByClassName("tag");
