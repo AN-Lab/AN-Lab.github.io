@@ -42,7 +42,7 @@
 			</div>
 		</div>
 		{% for post in site.posts %}
-        <div class="catalog" onclick="changePost('{{ page.date | date: "%Y-%m-%d" }}-{{ page.title }}-{{ page.author }}.md')">
+        <div class="catalog" onclick="changePost('{{ post.date | date: "%Y-%m-%d" }}-{{ post.title }}-{{ post.author }}.md')">
 			<img src="img/book.png">
 			<p>{{ post.title }}</p>
 		</div>
