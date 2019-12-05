@@ -203,7 +203,14 @@ function creatFile(file_name, category, file_content, author, tags) {
 
 //切换到指定的文章进行编辑
 function changePost(file_name){
-  var title = file_name.slice(getCharLocation(file_name,"-",3),getCharLocation(file_name,"-",4));
+  $(".catalog").attr("class","catalog");
+  var a = document.getElementsByClassName("catalog-author");
+  for (var i = 0; i < a.length; i++){
+    if (a[i].innerHTML == username){
+      a[i].parentNode.className = "catalog selected";
+    }
+  }
+  var title = file_name.slice(getCharLocation(file_name,"-",3)+1,getCharLocation(file_name,"-",4));
   console.log(title);
 }
 

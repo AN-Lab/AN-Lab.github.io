@@ -41,6 +41,7 @@
 				onclick="changePost('{{ post.date | date: ‘%Y-%m-%d’ }}-{{ post.title }}-{{ post.author }}.md')">
 				<img src="img/book.png">
 				<p>{{ post.title }}</p>
+				<p style="display: none;" class="catalog-author">{{ post.author }}</p>
 			</div>
 			{% endfor %}
 		</div>
