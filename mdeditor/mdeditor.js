@@ -6,6 +6,14 @@ $(function () {
 
   $("#catalog-container").css("height", height + "px");
 
+  var catalog = document.getElementsByClassName("catalog-hidden").getElementsByClassName("catalog-author");
+  for (var i = 0; i < catalog.length; i++){
+    if (catalog[i].innerHTML != username){
+      catalog[i].parentNode.remove();
+    }
+  }
+  $(".catalog.hidden").attr("class","catalog");
+
   editor = editormd("editor", {
     placeholder: '本编辑器支持Markdown编辑，左边编写，右边预览',  //默认显示的文字
     width: "100%",

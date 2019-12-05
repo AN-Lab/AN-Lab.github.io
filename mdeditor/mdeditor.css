@@ -90,6 +90,9 @@ body{
     width: 15%;
     background-color: #EFF8FB;
 }
+#container #catalog-container .catalog-hidden{
+    display: none;
+}
 #container #catalog-container .catalog{
     width: 100%;
     height: 40px;
