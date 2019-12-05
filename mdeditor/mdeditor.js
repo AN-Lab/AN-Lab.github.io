@@ -12,7 +12,7 @@ $(function () {
       catalog[i].parentNode.remove();
     }
   }
-  $(".catalog.hidden").attr("class","catalog");
+  $(".catalog-hidden").attr("class","catalog");
 
   editor = editormd("editor", {
     placeholder: '本编辑器支持Markdown编辑，左边编写，右边预览',  //默认显示的文字
