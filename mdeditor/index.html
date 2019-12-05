@@ -1,4 +1,6 @@
-﻿<!doctype html>
+﻿---
+---
+<!doctype html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -24,7 +26,27 @@
 		</div>
 	</div>
 	<div id="container">
-		<div id="catalog-container"></div>
+		<div id="catalog-container">
+			<div class="catalog" onclick="">
+				<img src="img/book.png">
+				<p>Java入门教程</p>
+			</div>
+			<div class="catalog">
+				<img src="img/book.png">
+				<p>CSS设计教程</p>
+			</div>
+			<div class="catalog">
+				<img src="img/book.png">
+				<p>PS入门到精通</p>
+			</div>
+		</div>
+		{% for post in site.posts %}
+        <div class="catalog" author="{{ post.author }}" onclick="changePost('{{ page.date | date: "%Y-%m-%d" }}-{{ page.title }}-{{ page.author }}.md')">
+			<img src="img/book.png">
+			<p>{{ post.title }}</p>
+		</div>
+		{% endfor %}
+		
 		<div id="editor-container">
 			<div id="editor">
 				<textarea style="display:none;"></textarea>

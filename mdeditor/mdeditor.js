@@ -200,3 +200,8 @@ function creatFile(file_name, category, file_content, author, tags) {
     }
   })
 }
+
+//切换到指定的文章进行编辑
+function changePost(file_name){
+  console.log(file_name);
+}
