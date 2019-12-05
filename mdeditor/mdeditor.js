@@ -6,7 +6,7 @@ $(function () {
 
   $("#catalog-container").css("height", height + "px");
 
-  var catalog = document.getElementsByClassName("catalog-hidden").getElementsByClassName("catalog-author");
+  var catalog = document.getElementsByClassName("catalog-author");
   for (var i = 0; i < catalog.length; i++){
     if (catalog[i].innerHTML != username){
       catalog[i].parentNode.remove();
