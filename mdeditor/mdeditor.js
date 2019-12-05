@@ -203,5 +203,15 @@ function creatFile(file_name, category, file_content, author, tags) {
 
 //切换到指定的文章进行编辑
 function changePost(file_name){
-  console.log(file_name);
+  var title = file_name.slice(getCharLocation(file_name,"-",3),getCharLocation(file_name,"-",4));
+  console.log(title);
+}
+
+//查找一个字符char在字符串str中第n次出现的位置
+function getCharLocation(str,char,n){
+  var x = -1;
+  for (var i = 0; i < n; i++){
+    x = str.indexOf(char,x+1);
+  }
+  return x;
 }

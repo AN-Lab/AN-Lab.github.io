@@ -36,21 +36,9 @@
 	</div>
 	<div id="container">
 		<div id="catalog-container">
-			<div class="catalog" onclick="changePost('Java入门教程')">
-				<img src="img/book.png">
-				<p>Java入门教程</p>
-			</div>
-			<div class="catalog" onclick="changePost('CSS设计教程')">
-				<img src="img/book.png">
-				<p>CSS设计教程</p>
-			</div>
-			<div class="catalog" onclick="changePost('PS入门到精通')">
-				<img src="img/book.png">
-				<p>PS入门到精通</p>
-			</div>
 			{% for post in site.posts %}
 			<div class="catalog"
-				onclick="changePost('{{ post.date | date: "%Y-%m-%d" }}-{{ post.title }}-{{ post.author }}.md')">
+				onclick="changePost('{{ post.date | date: ‘%Y-%m-%d’ }}-{{ post.title }}-{{ post.author }}.md')">
 				<img src="img/book.png">
 				<p>{{ post.title }}</p>
 			</div>
