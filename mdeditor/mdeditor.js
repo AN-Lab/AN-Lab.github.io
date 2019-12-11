@@ -82,6 +82,10 @@ function submit() {
   creatFile(title,category,content,username,tags);
 }
 
+function saveDraft(){
+  
+}
+
 //获取cookie信息
 function getCookie(cname) {
   var name = cname + "=";
@@ -212,6 +216,9 @@ function creatFile(file_name, category, file_content, author, tags) {
 //切换到指定的文章进行编辑
 function changePost(file_name){
   var title = file_name.slice(getCharLocation(file_name,"-",3)+1,getCharLocation(file_name,"-",4));
+  var file_content = getPost("https://api.github.com/repos/AN-Lab/AN-Lab.github.io/contents/_posts/"+file_name);
+  $("#title").val(title);
+  editor.setMarkdown(getPostContent(file_content));
   $(".catalog").attr("class","catalog");
   var a = document.getElementsByClassName("catalog-title");
   for (var i = 0; i < a.length; i++){
@@ -219,7 +226,6 @@ function changePost(file_name){
       a[i].parentNode.className = "catalog selected";
     }
   }
-  
   console.log(file_name);
 }
 
@@ -230,4 +236,28 @@ function getCharLocation(str,char,n){
     x = str.indexOf(char,x+1);
   }
   return x;
+}
+
+//从GitHub仓库中获取指定文件的文件内容
+function getPost(url){
+	var file_content;
+	$.ajax({
+		url:url,
+		type:"GET",
+		async:false,
+		success:function(data){
+			var json = JSON.stringify(data);
+			var obj = eval ("(" + json + ")");
+			file_content = decodeURIComponent(escape(window.atob(obj.content)));
+		},
+		error:function(err){
+			alert(err);
+		}
+	})
+	return file_content;
+}
+
+//从文件内容中获取文章内容部分
+function getPostContent(file_content){
+  return file_content.slice(file_content.indexOf("---",3)+4);
 }
