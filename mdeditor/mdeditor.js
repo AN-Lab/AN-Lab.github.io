@@ -220,7 +220,7 @@ function changePost(file_name){
     }
   }
   
-  console.log(title);
+  console.log(file_name);
 }
 
 //查找一个字符char在字符串str中第n次出现的位置
