@@ -36,6 +36,11 @@
 	</div>
 	<div id="container">
 		<div id="catalog-container">
+			<div class="catalog selected"
+				onclick="changePost()">
+				<img src="img/notes.png">
+				<p class="catalog-title">新建文章</p>
+			</div>
 			{% for post in site.posts %}
 			<div class="catalog-hidden"
 				onclick="changePost('{{ post.date | date: '%Y-%m-%d' }}-{{ post.title }}-{{ post.author }}.md')">

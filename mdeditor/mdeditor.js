@@ -215,6 +215,13 @@ function creatFile(file_name, category, file_content, author, tags) {
 
 //切换到指定的文章进行编辑
 function changePost(file_name){
+  var conf = confirm("当前编辑内容还未保存，是否继续？");
+  if (!conf) return;
+  if (file_name == null){
+    $("#title").val("");
+    editor.setMarkdown(getPostContent(""));
+    return;
+  }
   var title = file_name.slice(getCharLocation(file_name,"-",3)+1,getCharLocation(file_name,"-",4));
   var file_content = getPost("https://api.github.com/repos/AN-Lab/AN-Lab.github.io/contents/_posts/"+file_name);
   $("#title").val(title);
