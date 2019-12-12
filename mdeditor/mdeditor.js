@@ -220,6 +220,8 @@ function changePost(file_name){
   if (file_name == null){
     $("#title").val("");
     editor.setMarkdown(getPostContent(""));
+    $(".catalog").attr("class","catalog");
+    $("#new-post").attr("class","catalog selected");
     return;
   }
   var title = file_name.slice(getCharLocation(file_name,"-",3)+1,getCharLocation(file_name,"-",4));
