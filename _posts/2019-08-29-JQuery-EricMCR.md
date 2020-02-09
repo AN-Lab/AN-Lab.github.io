@@ -6,7 +6,7 @@ date: 2019-08-29 14:43:30
 tags:
 - JavaScript
 - 测试
-category: Web Page
+category: 类别3
 ---
 # 学习Jquery
 

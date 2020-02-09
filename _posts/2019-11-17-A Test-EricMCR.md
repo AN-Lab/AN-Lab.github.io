@@ -1,13 +1,13 @@
 ---
 layout: default
 title: A Test
-category: 类别1
 author: EricMCR
 date: 2019-11-17 12:43:19
 tags:
 - JS
 - CSS
 - Test
+category: 类别5
 ---
 > 引用文本 Blockquotes
 

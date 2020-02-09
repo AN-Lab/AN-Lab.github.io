@@ -1,11 +1,11 @@
 ---
 layout: default
 title: Mditor Test 1
-category: Web Page
 author: EricMCR
 date: 2019-10-13 12:54:18
 tags:
 - Test
+category: 类别3
 ---
 欢迎使用Mditor
 ======
