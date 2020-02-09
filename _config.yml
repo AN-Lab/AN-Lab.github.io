@@ -10,10 +10,10 @@ BaseURL: https://an-lab.github.io
 permalink: /:year/:month/:day/:title
 
 categories: 
-  name: 类别一
-  name: 类别二
-  name: 类别三
-  name: 类别四
+  类别一
+  类别二
+  类别三
+  类别四
 
 lsi: true
 
