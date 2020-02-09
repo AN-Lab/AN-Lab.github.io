@@ -64,41 +64,49 @@
 				<img src="img/notes.png">
 				<p class="catalog-title">类别2</p>
 			</div>
-			{% for post in site.categories.类别2 %}
+			{% for post in site.posts %}
+			{% if post.category == '类别2' %}
             <div class="catalog">
 				<img src="img/book.png">
 				<p class="catalog-title">{{post.title}}</p>
 			</div>
+			{% endif %}
 			{% endfor %}
 			<div class="catalog">
 				<img src="img/notes.png">
 				<p class="catalog-title">类别3</p>
 			</div>
-			{% for post in site.posts where category == '类别3' %}
+			{% for post in site.posts %}
+			{% if post.category == '类别3' %}
             <div class="catalog">
 				<img src="img/book.png">
 				<p class="catalog-title">{{post.title}}</p>
 			</div>
+			{% endif %}
 			{% endfor %}
 			<div class="catalog">
 				<img src="img/notes.png">
 				<p class="catalog-title">类别4</p>
 			</div>
-			{% for post in site.categories.类别4 %}
+			{% for post in site.posts %}
+			{% if post.category == '类别4' %}
             <div class="catalog">
 				<img src="img/book.png">
 				<p class="catalog-title">{{post.title}}</p>
 			</div>
+			{% endif %}
 			{% endfor %}
 			<div class="catalog">
 				<img src="img/notes.png">
 				<p class="catalog-title">类别5</p>
 			</div>
-			{% for post in site.categories.类别5 %}
+			{% for post in site.posts %}
+			{% if post.category == '类别5' %}
             <div class="catalog">
 				<img src="img/book.png">
 				<p class="catalog-title">{{post.title}}</p>
 			</div>
+			{% endif %}
 			{% endfor %}
 		</div>
 
