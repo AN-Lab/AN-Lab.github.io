@@ -9,6 +9,12 @@ Encoding: utf-8
 BaseURL: https://an-lab.github.io
 permalink: /:year/:month/:day/:title
 
+categories: 
+  name: 类别一
+  name: 类别二
+  name: 类别三
+  name: 类别四
+
 lsi: true
 
 #enable_coderay: true
