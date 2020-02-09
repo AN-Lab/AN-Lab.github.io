@@ -53,10 +53,12 @@
 				<p class="catalog-title">类别1</p>
 			</div>
 			{% for post in site.posts where category = '类别1' %}
+			{% if post.category = '类别1' %}
             <div class="catalog">
 				<img src="img/book.png">
 				<p class="catalog-title">{{post.title}}</p>
 			</div>
+			{% endif %}
 			{% endfor %}
 			<div class="catalog">
 				<img src="img/notes.png">
