@@ -74,7 +74,7 @@
 				<img src="img/notes.png">
 				<p class="catalog-title">类别3</p>
 			</div>
-			{% for post in site.categories.类别3 %}
+			{% for post in site.posts where category == '类别3' %}
             <div class="catalog">
 				<img src="img/book.png">
 				<p class="catalog-title">{{post.title}}</p>
