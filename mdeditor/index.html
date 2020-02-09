@@ -53,7 +53,7 @@
 				<p class="catalog-title">类别1</p>
 			</div>
 			{% for post in site.posts %}
-			{% if post.category = '类别1' %}
+			{% if post.category == '类别1' %}
             <div class="catalog">
 				<img src="img/book.png">
 				<p class="catalog-title">{{post.title}}</p>
