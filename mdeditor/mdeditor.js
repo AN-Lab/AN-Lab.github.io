@@ -236,6 +236,7 @@ function changePost(file_name){
     }
   }
   console.log(file_name);
+  getTags(file_content);
 }
 
 //查找一个字符char在字符串str中第n次出现的位置
@@ -269,4 +270,11 @@ function getPost(url){
 //从文件内容中获取文章内容部分
 function getPostContent(file_content){
   return file_content.slice(file_content.indexOf("---",3)+4);
+}
+
+//从文件内容中获取文章标签部分
+function getTags(file_content){
+  var tags = new Array();
+  var tagStr = file_content.slice(file_content.indexOf("tags:")+5, file_content.indexOf("category:"));
+  console.log(tagStr);
 }
