@@ -275,6 +275,15 @@ function getPostContent(file_content){
 //从文件内容中获取文章标签部分
 function getTags(file_content){
   var tags = new Array();
-  var tagStr = file_content.slice(file_content.indexOf("tags:")+5, file_content.indexOf("category:"));
+  var tagStr = file_content.slice(file_content.indexOf("tags:")+6, file_content.indexOf("category:"));
   console.log(tagStr);
+  for(var i = 0; i >= 0 ;i++){
+    if (getCharLocation(tagStr, "- ", 2) == -1){
+      tags[i] = tagStr.slice(tagStr.indexOf("- ")+2);
+      break;
+    }
+    tags[i] = tagStr.slice(tagStr.indexOf("- ")+2, getCharLocation(tagStr, "- ", 2));
+    tagStr = tagStr.slice(getCharLocation(tagStr, "- ", 2));
+  }
+  console.log(tags);
 }
