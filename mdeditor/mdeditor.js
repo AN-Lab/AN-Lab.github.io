@@ -217,6 +217,7 @@ function creatFile(file_name, category, file_content, author, tags) {
 function changePost(file_name){
   var conf = confirm("当前编辑内容还未保存，是否继续？");
   if (!conf) return;
+  $(".tag-box").remove();
   if (file_name == null){
     $("#title").val("");
     editor.setMarkdown(getPostContent(""));
@@ -240,10 +241,10 @@ function changePost(file_name){
   //更新标签信息
   var tags = getTags(file_content);
   var lastTagId = "";
-  for (var i = 0; i < tags.length; i++){
+  for (var i = tags.length-1; i >= 0; i--){
     $("#tag-container").prepend("<div class='tag-box'><input type='text' class='tag' onblur='checkTag()' value='"+tags[i]+"'><div class='delete-button'>&times</div></div>");
+    $("input.tag:first").width(getTagWidth($("input.tag:first").val())+3);
   }
-  $(input.tag).width(getTagWidth($(input.tag).val())+3);
   $("input.tag").bind('input propertychange', function () {
     $(this).width(getTagWidth($(this).val())+3);
   });
