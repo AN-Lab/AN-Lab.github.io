@@ -236,7 +236,20 @@ function changePost(file_name){
     }
   }
   console.log(file_name);
-  getTags(file_content);
+
+  //更新标签信息
+  var tags = getTags(file_content);
+  var lastTagId = "";
+  for (var i = 0; i < tags.length; i++){
+    $("#tag-container").prepend("<div class='tag-box'><input type='text' class='tag' onblur='checkTag()' value='"+tags[i]+"'><div class='delete-button'>&times</div></div>");
+  }
+  $(input.tag).width(getTagWidth($(input.tag).val())+3);
+  $("input.tag").bind('input propertychange', function () {
+    $(this).width(getTagWidth($(this).val())+3);
+  });
+  $(".tag-box .delete-button").click(function () {
+    $(this).parent().remove();
+  })
 }
 
 //查找一个字符char在字符串str中第n次出现的位置
@@ -279,11 +292,12 @@ function getTags(file_content){
   console.log(tagStr);
   for(var i = 0; i >= 0 ;i++){
     if (getCharLocation(tagStr, "- ", 2) == -1){
-      tags[i] = tagStr.slice(tagStr.indexOf("- ")+2);
+      tags[i] = tagStr.slice(tagStr.indexOf("- ")+2, tagStr.length-1);
       break;
     }
-    tags[i] = tagStr.slice(tagStr.indexOf("- ")+2, getCharLocation(tagStr, "- ", 2));
+    tags[i] = tagStr.slice(tagStr.indexOf("- ")+2, getCharLocation(tagStr, "- ", 2)-1);
     tagStr = tagStr.slice(getCharLocation(tagStr, "- ", 2));
   }
   console.log(tags);
+  return tags;
 }
