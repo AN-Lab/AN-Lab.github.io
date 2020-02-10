@@ -89,6 +89,7 @@ body{
 #container #catalog-container{
     width: 15%;
     background-color: #EFF8FB;
+    overflow-y: scroll;
 }
 #container #catalog-container .catalog-hidden{
     display: none;
