@@ -55,9 +55,11 @@
 			<div class="sublist" id="sublist1">
 			{% for post in site.posts %}
 			{% if post.category == '类别1' %}
-			<div class="catalog">
+			<div class="catalog-hidden"
+				onclick="changePost('{{ post.date | date: '%Y-%m-%d' }}-{{ post.title }}-{{ post.author }}.md')">
 				<img src="img/book.png">
-				<p class="catalog-title">{{post.title}}</p>
+				<p class="catalog-title">{{ post.title }}</p>
+				<p style="display: none;" class="catalog-author">{{ post.author }}</p>
 			</div>
 			{% endif %}
 			{% endfor %}
@@ -69,9 +71,11 @@
 			<div class="sublist" id="sublist2">
 			{% for post in site.posts %}
 			{% if post.category == '类别2' %}
-			<div class="catalog">
+			<div class="catalog-hidden"
+				onclick="changePost('{{ post.date | date: '%Y-%m-%d' }}-{{ post.title }}-{{ post.author }}.md')">
 				<img src="img/book.png">
-				<p class="catalog-title">{{post.title}}</p>
+				<p class="catalog-title">{{ post.title }}</p>
+				<p style="display: none;" class="catalog-author">{{ post.author }}</p>
 			</div>
 			{% endif %}
 			{% endfor %}
@@ -83,9 +87,11 @@
 			<div class="sublist" id="sublist3">
 			{% for post in site.posts %}
 			{% if post.category == '类别3' %}
-			<div class="catalog">
+			<div class="catalog-hidden"
+				onclick="changePost('{{ post.date | date: '%Y-%m-%d' }}-{{ post.title }}-{{ post.author }}.md')">
 				<img src="img/book.png">
-				<p class="catalog-title">{{post.title}}</p>
+				<p class="catalog-title">{{ post.title }}</p>
+				<p style="display: none;" class="catalog-author">{{ post.author }}</p>
 			</div>
 			{% endif %}
 			{% endfor %}
@@ -97,9 +103,11 @@
 			<div class="sublist" id="sublist4">
 			{% for post in site.posts %}
 			{% if post.category == '类别4' %}
-			<div class="catalog">
+			<div class="catalog-hidden"
+				onclick="changePost('{{ post.date | date: '%Y-%m-%d' }}-{{ post.title }}-{{ post.author }}.md')">
 				<img src="img/book.png">
-				<p class="catalog-title">{{post.title}}</p>
+				<p class="catalog-title">{{ post.title }}</p>
+				<p style="display: none;" class="catalog-author">{{ post.author }}</p>
 			</div>
 			{% endif %}
 			{% endfor %}
@@ -111,9 +119,11 @@
 			<div class="sublist" id="sublist5">
 			{% for post in site.posts %}
 			{% if post.category == '类别5' %}
-			<div class="catalog">
+			<div class="catalog-hidden"
+				onclick="changePost('{{ post.date | date: '%Y-%m-%d' }}-{{ post.title }}-{{ post.author }}.md')">
 				<img src="img/book.png">
-				<p class="catalog-title">{{post.title}}</p>
+				<p class="catalog-title">{{ post.title }}</p>
+				<p style="display: none;" class="catalog-author">{{ post.author }}</p>
 			</div>
 			{% endif %}
 			{% endfor %}
