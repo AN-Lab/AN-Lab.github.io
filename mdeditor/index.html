@@ -9,7 +9,9 @@
 	<title>文章编辑器</title>
 	<link rel="stylesheet" href="editor.md/css/editormd.min.css" />
 	<link rel="stylesheet" type="text/css" href="mdeditor.css">
+	<link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
 	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<script src="bootstrap-4.4.1-dist/js/bootstrap.js"></script>
 	<script src="editor.md/editormd.min.js"></script>
 	<script type="text/javascript" src="mdeditor.js"></script>
 </head>
@@ -48,15 +50,17 @@
 				<p style="display: none;" class="catalog-author">{{ post.author }}</p>
 			</div>
 			{% endfor %}
-			<div class="catalog">
+			<div class="catalog" data-target="#sublist1">
 				<img src="img/notes.png">
 				<p class="catalog-title">类别1</p>
 			</div>
 			{% for post in site.posts %}
 			{% if post.category == '类别1' %}
-            <div class="catalog">
-				<img src="img/book.png">
-				<p class="catalog-title">{{post.title}}</p>
+			<div class="collapse" id="sublist1">
+				<div class="catalog">
+					<img src="img/book.png">
+					<p class="catalog-title">{{post.title}}</p>
+				</div>
 			</div>
 			{% endif %}
 			{% endfor %}
@@ -66,7 +70,7 @@
 			</div>
 			{% for post in site.posts %}
 			{% if post.category == '类别2' %}
-            <div class="catalog">
+			<div class="catalog">
 				<img src="img/book.png">
 				<p class="catalog-title">{{post.title}}</p>
 			</div>
@@ -78,7 +82,7 @@
 			</div>
 			{% for post in site.posts %}
 			{% if post.category == '类别3' %}
-            <div class="catalog">
+			<div class="catalog">
 				<img src="img/book.png">
 				<p class="catalog-title">{{post.title}}</p>
 			</div>
@@ -90,7 +94,7 @@
 			</div>
 			{% for post in site.posts %}
 			{% if post.category == '类别4' %}
-            <div class="catalog">
+			<div class="catalog">
 				<img src="img/book.png">
 				<p class="catalog-title">{{post.title}}</p>
 			</div>
@@ -102,7 +106,7 @@
 			</div>
 			{% for post in site.posts %}
 			{% if post.category == '类别5' %}
-            <div class="catalog">
+			<div class="catalog">
 				<img src="img/book.png">
 				<p class="catalog-title">{{post.title}}</p>
 			</div>
