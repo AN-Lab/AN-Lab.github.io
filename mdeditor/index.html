@@ -48,7 +48,7 @@
 				<p style="display: none;" class="catalog-author">{{ post.author }}</p>
 			</div>
 			{% endfor %}
-			<div class="catalog" onclick="javascript: $('sublist1').slideToggle();">
+			<div class="catalog" onclick="javascript: $('#sublist1').slideToggle('fast');">
 				<img src="img/notes.png">
 				<p class="catalog-title">类别1</p>
 			</div>
@@ -62,11 +62,11 @@
 			{% endif %}
 			{% endfor %}
 		    </div>
-			<div class="catalog">
+			<div class="catalog" onclick="javascript: $('#sublist2').slideToggle('fast');">
 				<img src="img/notes.png">
 				<p class="catalog-title">类别2</p>
 			</div>
-			<div class="sublist" id="sublist1">
+			<div class="sublist" id="sublist2">
 			{% for post in site.posts %}
 			{% if post.category == '类别2' %}
 			<div class="catalog">
@@ -76,11 +76,11 @@
 			{% endif %}
 			{% endfor %}
 		    </div>
-			<div class="catalog">
+			<div class="catalog" onclick="javascript: $('#sublist3').slideToggle('fast');">
 				<img src="img/notes.png">
 				<p class="catalog-title">类别3</p>
 			</div>
-			<div class="sublist" id="sublist1">
+			<div class="sublist" id="sublist3">
 			{% for post in site.posts %}
 			{% if post.category == '类别3' %}
 			<div class="catalog">
@@ -90,11 +90,11 @@
 			{% endif %}
 			{% endfor %}
 		    </div>
-			<div class="catalog">
+			<div class="catalog" onclick="javascript: $('#sublist4').slideToggle('fast');">
 				<img src="img/notes.png">
 				<p class="catalog-title">类别4</p>
 			</div>
-			<div class="sublist" id="sublist1">
+			<div class="sublist" id="sublist4">
 			{% for post in site.posts %}
 			{% if post.category == '类别4' %}
 			<div class="catalog">
@@ -104,11 +104,11 @@
 			{% endif %}
 			{% endfor %}
 		    </div>
-			<div class="catalog">
+			<div class="catalog" onclick="javascript: $('#sublist5').slideToggle('fast');">
 				<img src="img/notes.png">
 				<p class="catalog-title">类别5</p>
 			</div>
-			<div class="sublist" id="sublist1">
+			<div class="sublist" id="sublist5">
 			{% for post in site.posts %}
 			{% if post.category == '类别5' %}
 			<div class="catalog">
