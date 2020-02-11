@@ -221,6 +221,7 @@ function changePost(file_name){
   $("#category-container").val("default");
   if (file_name == null){
     $("#title").val("");
+    $("#title").removeAttr("disabled");
     editor.setMarkdown(getPostContent(""));
     $(".catalog").attr("class","catalog");
     $("#new-post").attr("class","catalog selected");
@@ -229,6 +230,7 @@ function changePost(file_name){
   var title = file_name.slice(getCharLocation(file_name,"-",3)+1,getCharLocation(file_name,"-",4));
   var file_content = getPost("https://api.github.com/repos/AN-Lab/AN-Lab.github.io/contents/_posts/"+file_name);
   $("#title").val(title);
+  $("#title").attr("disabled", "disabled");
   editor.setMarkdown(getPostContent(file_content));
   $(".catalog").attr("class","catalog");
   var a = document.getElementsByClassName("catalog-title");
