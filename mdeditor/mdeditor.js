@@ -251,6 +251,11 @@ function changePost(file_name){
   $(".tag-box .delete-button").click(function () {
     $(this).parent().remove();
   })
+
+  //更新类别信息
+  var category = getCategory(file_content);
+  console.log(category);
+  $("#category-container").val("category");
 }
 
 //查找一个字符char在字符串str中第n次出现的位置
@@ -301,4 +306,9 @@ function getTags(file_content){
   }
   console.log(tags);
   return tags;
+}
+
+//从文件内容中获取类别部分
+function getCategory(file_content){
+  return file_content.slice(file_content.indexOf("category: ")+10, file_content.indexOf("/n", file_content.indexOf("category: ")));
 }
