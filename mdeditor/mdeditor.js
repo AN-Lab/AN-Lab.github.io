@@ -218,6 +218,7 @@ function changePost(file_name){
   var conf = confirm("当前编辑内容还未保存，是否继续？");
   if (!conf) return;
   $(".tag-box").remove();
+  $("#category-container").val("category");
   if (file_name == null){
     $("#title").val("");
     editor.setMarkdown(getPostContent(""));
