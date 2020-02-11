@@ -311,5 +311,5 @@ function getTags(file_content){
 
 //从文件内容中获取类别部分
 function getCategory(file_content){
-  return file_content.slice(file_content.indexOf("category: ")+10, file_content.indexOf("/n", file_content.indexOf("category: ")));
+  return file_content.slice(file_content.indexOf("category: ")+10, file_content.indexOf("\n", file_content.indexOf("category: ")));
 }
