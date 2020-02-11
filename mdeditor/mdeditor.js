@@ -184,7 +184,7 @@ function creatFile(file_name, category, file_content, author, tags) {
   }
 
   //将头信息构建并连接进文章内容
-  file_content = "---\nlayout: default\ntitle: " + file_name + "\ncategory: " + category + "\nauthor: " + author + "\ndate: " + time + tagsToString + "\n---\n" + file_content;
+  file_content = "---\nlayout: default\ntitle: " + file_name + "\nauthor: " + author + "\ndate: " + time + tagsToString + "\ncategory: " + category  + "\n---\n" + file_content;
 
   //将文件内容转码
   var content = window.btoa(unescape(encodeURIComponent(file_content)));
