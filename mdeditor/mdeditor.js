@@ -218,7 +218,7 @@ function changePost(file_name){
   var conf = confirm("当前编辑内容还未保存，是否继续？");
   if (!conf) return;
   $(".tag-box").remove();
-  $("#category-container").val("category");
+  $("#category-container").val("default");
   if (file_name == null){
     $("#title").val("");
     editor.setMarkdown(getPostContent(""));
@@ -256,7 +256,7 @@ function changePost(file_name){
   //更新类别信息
   var category = getCategory(file_content);
   console.log(category);
-  $("#category-container").val("category");
+  $("#category-container").val(category);
 }
 
 //查找一个字符char在字符串str中第n次出现的位置
